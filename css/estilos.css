@@ -355,7 +355,137 @@ font-size: 15px;
     margin-left: 20px;
 }
 
+/*  ================================== Codigo del captcha =========================================  */
 
+.boton-principal{
+    
+    position: absolute;
+    top: 220px; 
+    left: 10%;
+}
 
+.boton-principal {
+    text-decoration: none;
+    padding: 26px 90px;
+    font-size: 1.5rem;
+    margin: 120px;
+
+    background: #001064;
+    color: white;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .boton-principal::after {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .boton-principal:hover {
+    transform: translate(-12px, -12px);
+    background: #12C3FB; /* Color al pasar el cursor en "Quiero automatizar" */
+  }
+  
+  /* Estilos para los botones del CAPTCHA */
+  .botones-captcha {
+    display: flex;
+    justify-content: center; /* Centrar los botones */
+    gap: 15px; /* Espacio entre los botones */
+    margin-top: 10px; /* Espacio entre las imágenes y los botones */
+  }
+  
+  .botones-captcha button {
+    margin-top: 10px; /* Margen superior para separar del contenido */
+    padding: 10px 20px; /* Espaciado interno de los botones */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  .botones-captcha button:hover {
+    background-color: #45a049; /* Color al pasar el cursor */
+  }
+  
+  /* Ajustes para el contenedor del CAPTCHA */
+  #contenedorCaptcha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio reducido entre los elementos */
+    margin-top: 20px; /* Ajustar margen superior */
+  }
+  
+  .grilla-captcha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .imagen-captcha {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  
+  .imagen-captcha.seleccionada {
+    border-color: #4CAF50; /* Color para imágenes seleccionadas */
+  }
+  
+  #mensajeCaptcha {
+    margin-top: 10px; /* Espacio superior para el mensaje de validación */
+    font-size: 0.9rem; /* Tamaño de fuente del mensaje */
+    color: red; /* Color para indicar error */
+    text-align: center; /* Alinear el mensaje al centro */
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .contenido-modal {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px; /* Mantener tamaño del modal */
+  }
+  
+  .btn-cerrar {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Animación para el mensaje "No soy un robot" */
+  @keyframes slide-up {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .animate {
+    animation: slide-up 0.5s ease-in-out forwards; /* Aplicar la animación */
+  }
+/*  ================================== Codigo del captcha =========================================  */
 
 
