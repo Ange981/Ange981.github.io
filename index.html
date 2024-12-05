@@ -31,19 +31,52 @@
             </div>
         </div>
         <div class="Contenedor">
+            
             <div class="Boton">
                 <div class="imagenes-lineadas">
                 <img src="img/park2.png" class="imagen1" alt="">
                 <img src="img/park1.png" class="imagen3" alt="">
                 </div>
-                <div>
-                    <a href="https://api.whatsapp.com/send?phone=3334955374" class="boton1" target="_blank">Quiero Automatizar</a>
+                <button id="mostrarCaptchaBtn" class="boton-principal">Quiero automatizar</button>
+
+<!--  ================================== Codigo del captcha =========================================-->
+
+                <!-- Ventana modal -->
+                <div class="modal" id="modalCaptcha">
+                  <div class="contenido-modal">
+                    <span class="btn-cerrar" id="cerrarModalCaptcha">&times;</span>
+              
+                    <!-- Sección para el mensaje "No soy un robot" -->
+                    <div id="contenedorNoRobot" class="animate">
+                      <p><label><input type="checkbox" id="checkboxNoRobot"> No soy un robot</label></p>
+                    </div>
+              
+                    <!-- Contenedor del CAPTCHA (inicialmente oculto) -->
+                    <div id="contenedorCaptcha" style="display: none;">
+                      <h2>Verificación CAPTCHA</h2>
+                      <p>Seleccione todas las imágenes que contengan gatos:</p>
+              
+                      <div id="imagenesCaptcha" class="grilla-captcha"></div>
+                      
+                      <div class="botones-captcha"> <!-- Nueva clase para los botones del CAPTCHA -->
+                        <button class="refrescar-captcha" id="refrescarCaptcha">Actualizar</button>
+                        <button class="validar-captcha" type="submit">Validar</button>
+                      </div>
+              
+                      <p id="mensajeCaptcha"></p>
+<!--  ================================== Codigo del captcha =========================================-->
+
+                    </div>
+                  </div>
                 </div>
+              
+                <script src="script.js"></script>
                 <div class="imagenes-inline">
                     <img src="img/in1.png" class="in1" alt="">
                     <img src="img/in2.png" class="in2" alt="">
                     <img src="img/in3.png" class="in3" alt="">
                 </div>
+                
             </div>
         </div>
     </header>
@@ -80,6 +113,9 @@
                 <img src="img/Robot.png" alt="">
             </a>
         </figure>
+    </div>
+    <div class="abajo">
+        
     </div>
 </body>
 </html>
